@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e9">
+    <meta name="description" content="ความทรงจำของมะพร้าว">
+    <title>ความทรงจำของมะพร้าว</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="main-content">
+      <section class="intro" aria-labelledby="book-title">
+        <div class="intro-row">
+          <h1 id="book-title">ความทรงจำของมะพร้าว</h1>
+        </div>
+      </section>
+
+      <section class="reader" aria-label="อัลบั้มภาพ">
+        <div class="book-stage">
+          <button class="nav-button nav-previous" id="previous-button" type="button" aria-label="เปิดหน้าก่อนหน้า">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <div class="book" id="book" aria-live="polite"></div>
+          <button class="nav-button nav-next" id="next-button" type="button" aria-label="เปิดหน้าถัดไป">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
+
+        <div class="reader-controls">
+          <button class="text-nav" id="previous-label" type="button" aria-label="เปิดหน้าก่อนหน้า">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+          </button>
+          <nav class="spread-picker" id="spread-picker" aria-label="เลือกหน้าของอัลบั้ม"></nav>
+          <button class="text-nav" id="next-label" type="button" aria-label="เปิดหน้าถัดไป">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
+
+        <div class="progress-track" role="progressbar" aria-label="ความคืบหน้าการอ่าน" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" id="progress-track">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="lightbox" id="lightbox" aria-label="ภาพขนาดใหญ่">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="ปิดภาพ">×</button>
+      <img class="lightbox-image" id="lightbox-image" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </dialog>
+  </body>
+</html>
